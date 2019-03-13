@@ -8,7 +8,7 @@ These blogs are updated on a daily or weekly basis.
 
 ### Blogs with slow update frequency
 
-These blogs are updated on a monthly basis (or even more). Entries are usually longer, with more fleshed out examples.
+These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
 
 
 
