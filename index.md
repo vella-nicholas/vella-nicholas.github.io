@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## Chronicles of the Developer
 
-You can use the [editor on GitHub](https://github.com/vella-nicholas/vella-nicholas.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+As a Software Developer, I come across various blogs with invaluable amounts of knowledge and information. This is a collection of resources I use to keep myself updated with the latest news and technology trends.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Blogs with high update frequency
 
-### Markdown
+These blogs are updated on a daily or weekly basis.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Blogs with slow update frequency
 
-```markdown
-Syntax highlighted code block
+These blogs are updated on a monthly basis (or even more). Entries are usually longer, with more fleshed out examples.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vella-nicholas/vella-nicholas.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Contributing
+If you think a resource deserves a spot in this page, open a pull request or an issue.
