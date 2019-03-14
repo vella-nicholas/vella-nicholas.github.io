@@ -1,6 +1,6 @@
 ## Chronicles of the Developer
 
-As a Software Developer, I come across various blogs with invaluable amounts of knowledge and information. This is a collection of resources I use to keep myself updated with the latest news and technology trends.
+As a Software Developer, I come across various blogs with a plethora of invaluable information. In assistance to our community I have put together a collection of resources that I use to keep myself updated with the latest news and technology trends.
 
 ### Blogs with high update frequency
 
