@@ -1,14 +1,11 @@
 ## Chronicles of the Developer
-
 As a Software Developer, I come across various blogs with a plethora of invaluable information. In assistance to our community I have put together a collection of resources that I use to keep myself updated with the latest news and technology trends.
 
 ### Blogs with high update frequency
-
 These blogs are updated on a daily or weekly basis.
 - [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
 
 ### Blogs with slow update frequency
-
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
 
 ### Contributing
