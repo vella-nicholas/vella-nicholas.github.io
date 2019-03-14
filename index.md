@@ -9,4 +9,4 @@ These blogs are updated on a daily or weekly basis.
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
 
 ### Contributing
-In the same spirit I would appreciate you sharing with me anything that might further aid in my knowledge. You can find me on [Twitter](https://twitter.com/nvella88){:target="_blank"}, [LinkedIn](https://mt.linkedin.com/in/vella-nicholas){:target="_blank"} or open a pull request.
+In the same spirit I would appreciate you sharing with me anything that might help me further improve on my knowledge. You can find me on [Twitter](https://twitter.com/nvella88){:target="_blank"}, [LinkedIn](https://mt.linkedin.com/in/vella-nicholas){:target="_blank"} or open a pull request.
