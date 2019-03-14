@@ -7,6 +7,7 @@ These blogs are updated on a daily or weekly basis.
 
 ### Blogs with slow update frequency
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
+- [The Code Whisperer](https://blog.thecodewhisperer.com/){:target="_blank"}
 
 ### Cheat Sheets
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
