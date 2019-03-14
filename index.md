@@ -5,7 +5,7 @@ As a Software Developer, I come across various blogs with invaluable amounts of 
 ### Blogs with high update frequency
 
 These blogs are updated on a daily or weekly basis.
-- [Steve Gordon's Blog](https://www.stevejgordon.co.uk/)
+- [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
 
 ### Blogs with slow update frequency
 
