@@ -5,14 +5,11 @@ As a Software Developer, I come across various blogs with invaluable amounts of 
 ### Blogs with high update frequency
 
 These blogs are updated on a daily or weekly basis.
+- [Steve Gordon's Blog](https://www.stevejgordon.co.uk/)
 
 ### Blogs with slow update frequency
 
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
-
-
-
-[Link](url) and ![Image](src)
 
 ### Contributing
 If you think a resource deserves a spot in this page, open a pull request or an issue.
