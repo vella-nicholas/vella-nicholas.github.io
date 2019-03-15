@@ -11,6 +11,9 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [csharp.christiannagel.com](https://csharp.christiannagel.com/){:target="_blank"}
 - [The Code Whisperer](https://blog.thecodewhisperer.com/){:target="_blank"}
 
+### Practice makes perfect: Interactive Platforms
+- [Katacoda](https://www.katacoda.com/){:target="_blank"}
+
 ### Cheat Sheets
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
 
