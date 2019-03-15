@@ -5,6 +5,7 @@ As a Software Developer, I come across various blogs with a plethora of invaluab
 These blogs are updated on a daily or weekly basis.
 - [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools/list){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news/list){:target="_blank"} zones.
 - [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
+- [Visual Studio Magazine](https://visualstudiomagazine.com/Home.aspx){:target="_blank"}
 
 ### Blogs with slow update frequency
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
