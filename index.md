@@ -19,7 +19,7 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
 
 ### Git Aliases
-[Step by step](https://superuser.com/questions/602872/how-do-i-modify-my-git-bash-profile-in-windows){:target="_blank"} guide on Windows.
+[Step by step](https://superuser.com/questions/602872/how-do-i-modify-my-git-bash-profile-in-windows){:target="_blank"} setup guide on Windows.
 
 ```
 alias ga='git add '; 
