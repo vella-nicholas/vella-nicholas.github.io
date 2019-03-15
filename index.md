@@ -19,6 +19,8 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
 
 ### Git Aliases
+[Step by step](https://superuser.com/questions/602872/how-do-i-modify-my-git-bash-profile-in-windows){:target="_blank"} guide on Windows.
+
 ```
 alias ga='git add '; 
 alias gaa='git add -A '; 
@@ -26,6 +28,7 @@ alias gb='git branch ';
 alias gc='git commit '; 
 alias gcm='git commit -m '; 
 alias go='git checkout '
+alias gpp='git pull --prune'
 ```
 
 ### Contributing
