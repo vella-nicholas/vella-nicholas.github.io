@@ -3,6 +3,7 @@ As a Software Developer, I come across various blogs with a plethora of invaluab
 
 ### Blogs with high update frequency
 These blogs are updated on a daily or weekly basis.
+- [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools/list){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news/list){:target="_blank"} zones.
 - [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
 
 ### Blogs with slow update frequency
