@@ -11,6 +11,7 @@ These blogs are updated on a daily or weekly basis.
 These blogs are updated on a monthly basis (or even more). Entries are usually longer and more fleshed out.
 - [StrathWeb: A free flowing web tech monologue](https://www.strathweb.com/){:target="_blank"}
 - [csharp.christiannagel.com](https://csharp.christiannagel.com/){:target="_blank"}
+- [Code Reform](http://codereform.com/){:target="_blank"}
 - [The Blinking Caret](https://www.blinkingcaret.com/){:target="_blank"}
 - [The Code Whisperer](https://blog.thecodewhisperer.com/){:target="_blank"}
 
