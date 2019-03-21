@@ -19,6 +19,8 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 
 ### Practice makes perfect: Interactive Platforms
 - [Katacoda](https://www.katacoda.com/){:target="_blank"}
+- [HackerRank](https://www.hackerrank.com/){:target="_blank"}
+- [CodinGame](https://www.codingame.com/start){:target="_blank"}
 
 ### Cheat Sheets
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
