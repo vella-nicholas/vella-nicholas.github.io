@@ -16,6 +16,7 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [FullStack Mark](https://fullstackmark.com/){:target="_blank"}
 - [Code Reform](http://codereform.com/){:target="_blank"}
 - [The Blinking Caret](https://www.blinkingcaret.com/){:target="_blank"}
+- [Piotr Gankiewicz](https://piotrgankiewicz.com/blog/){:target="_blank"}
 - [The Code Whisperer](https://blog.thecodewhisperer.com/){:target="_blank"}
 
 ### Practice makes perfect: Interactive Platforms
