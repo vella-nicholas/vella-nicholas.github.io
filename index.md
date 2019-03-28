@@ -24,6 +24,7 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [Katacoda](https://www.katacoda.com/){:target="_blank"}
 - [HackerRank](https://www.hackerrank.com/){:target="_blank"}
 - [CodinGame](https://www.codingame.com/start){:target="_blank"}
+- [GeeksForGeeks](https://practice.geeksforgeeks.org/){:target="_blank"}
 
 ### Cheat Sheets
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
