@@ -5,6 +5,7 @@ As a Software Developer, I come across various blogs with a plethora of invaluab
 These blogs are updated on a daily or weekly basis.
 - [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools/list){:target="_blank"}, [DevOps](https://dzone.com/devops-tutorials-tools-news/list){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news/list){:target="_blank"} zones.
 - [DEV](https://dev.to/){:target="_blank"}
+- [Go Make Things - Daily Developer Tips](https://gomakethings.com/articles/){:target="_blank"}
 - [DanylkoWeb](https://www.danylkoweb.com/){:target="_blank"}
 - [Exception Not Found](https://exceptionnotfound.net/){:target="_blank"}
 - [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
