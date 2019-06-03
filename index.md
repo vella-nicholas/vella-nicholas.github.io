@@ -9,6 +9,7 @@ These blogs are updated on a daily or weekly basis.
 - [DanylkoWeb](https://www.danylkoweb.com/){:target="_blank"}
 - [Exception Not Found](https://exceptionnotfound.net/){:target="_blank"}
 - [Steve Gordon's Blog](https://www.stevejgordon.co.uk/){:target="_blank"}
+- [Michael’s Coding Spot](https://michaelscodingspot.com/){:target="_blank"}
 - [Visual Studio Magazine](https://visualstudiomagazine.com/Home.aspx){:target="_blank"}
 
 ### Slow and Steady: Blogs with slow update frequency
