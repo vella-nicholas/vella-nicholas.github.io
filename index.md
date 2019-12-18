@@ -6,6 +6,8 @@ These blogs are updated on a daily or weekly basis.
 - [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools/list){:target="_blank"}, [DevOps](https://dzone.com/devops-tutorials-tools-news/list){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news/list){:target="_blank"} zones.
 - [DEV](https://dev.to/){:target="_blank"}
 - [Go Make Things - Daily Developer Tips](https://gomakethings.com/articles/){:target="_blank"}
+- [Alligator.io](https://alligator.io/){:target="_blank"}
+- [Real Python](https://realpython.com/){:target="_blank"}
 - [Jason Watmore's Blog](https://jasonwatmore.com){:target="_blank"}
 - [Hashnode](https://hashnode.com/){:target="_blank"}
 - [Michael’s Coding Spot](https://michaelscodingspot.com/){:target="_blank"}
