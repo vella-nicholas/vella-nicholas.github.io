@@ -36,6 +36,7 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [Visual Studio Code: Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf){:target="_blank"}
 - [OWASP Cheat Sheet Series](https://github.com/OWASP/CheatSheetSeries){:target="_blank"}
 - [Markdown Syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax){:target="_blank"}
+- [Linux Commands](https://dev.to/kedark/the-linux-guide-cheatsheet-commands-directories-etc-39k0){:target="_blank"}
 
 ### Git Aliases
 [Step by step](https://superuser.com/questions/602872/how-do-i-modify-my-git-bash-profile-in-windows){:target="_blank"} setup guide for Windows.
