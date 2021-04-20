@@ -37,6 +37,7 @@ These blogs are updated on a monthly basis (or even more). Entries are usually l
 - [OWASP Cheat Sheet Series](https://github.com/OWASP/CheatSheetSeries){:target="_blank"}
 - [Markdown Syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax){:target="_blank"}
 - [Linux Commands](https://dev.to/kedark/the-linux-guide-cheatsheet-commands-directories-etc-39k0){:target="_blank"}
+- [22 Best Practices for API Design](https://betterprogramming.pub/22-best-practices-to-take-your-api-design-skills-to-the-next-level-65569b200b9){:target="_blank"}
 
 ### Git Aliases
 [Step by step](https://superuser.com/questions/602872/how-do-i-modify-my-git-bash-profile-in-windows){:target="_blank"} setup guide for Windows.
