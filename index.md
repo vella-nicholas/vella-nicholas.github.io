@@ -3,7 +3,7 @@ As a Software Developer, I come across various blogs with a plethora of invaluab
 
 ### Morning Gymnastics: Blogs with high update frequency
 These blogs are updated on a daily or weekly basis.
-- [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools/list){:target="_blank"}, [DevOps](https://dzone.com/devops-tutorials-tools-news/list){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news/list){:target="_blank"} zones.
+- [DZone](https://dzone.com/){:target="_blank"} in particular the [Microservices](https://dzone.com/microservices-news-tutorials-tools){:target="_blank"}, [DevOps](https://dzone.com/devops-tutorials-tools-news){:target="_blank"} and [Web Dev](https://dzone.com/web-development-programming-tutorials-tools-news){:target="_blank"} zones.
 - [Confluent Blog](https://www.confluent.io/blog/){:target="_blank"}
 - [.NET documentation](https://docs.microsoft.com/en-us/dotnet/){:target="_blank"}
 - [DEV](https://dev.to/){:target="_blank"}
