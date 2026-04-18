@@ -2,7 +2,7 @@ import achievements from '@/data/achievements'
 
 export default function Achievements() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-16">
+    <section aria-label="Key achievements" className="w-full max-w-5xl mx-auto px-6 py-16">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {achievements.map((item) => (
           <div
