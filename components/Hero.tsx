@@ -2,7 +2,10 @@ import hero from '@/data/hero'
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-24 sm:py-32">
+    <section
+      aria-label="Introduction"
+      className="w-full max-w-5xl mx-auto px-6 py-24 sm:py-32"
+    >
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-zinc-100">
           {hero.name}
@@ -16,7 +19,7 @@ export default function Hero() {
           {hero.subheadline}
         </p>
 
-        <ul className="flex flex-wrap gap-3 mt-2">
+        <ul className="flex flex-wrap gap-3 mt-2" aria-label="Highlights">
           {hero.proofPoints.map((point) => (
             <li
               key={point}
@@ -32,7 +35,7 @@ export default function Hero() {
             href={hero.linkedInUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-medium text-sm px-6 py-3 rounded-lg transition-colors"
+            className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-medium text-sm px-6 py-3 rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
           >
             Connect on LinkedIn
           </a>

@@ -6,12 +6,18 @@ import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center">
-      <Hero />
-      <Achievements />
-      <Delivered />
-      <About />
-      <Contact />
-    </main>
+    <>
+      <header className="w-full flex flex-col items-center">
+        <Hero />
+      </header>
+      <main className="w-full flex flex-col items-center">
+        <Achievements />
+        <Delivered />
+        <About />
+      </main>
+      <footer className="w-full flex flex-col items-center">
+        <Contact />
+      </footer>
+    </>
   )
 }
