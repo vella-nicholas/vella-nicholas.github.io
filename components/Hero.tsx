@@ -7,10 +7,25 @@ export default function Hero() {
       aria-label="Introduction"
       className="w-full max-w-[1180px] mx-auto px-4 pt-[78px] pb-[42px]"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 items-center">
 
-        {/* Left column */}
-        <div className="flex flex-col gap-6">
+        {/* Left column — glass card */}
+        <div
+          className="relative overflow-hidden flex flex-col gap-6 rounded-[var(--radius)] border border-[var(--line)] p-[42px]"
+          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
+        >
+          {/* Bottom-right glow */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              inset: 'auto -30px -30px auto',
+              width: 180,
+              height: 180,
+              background: 'radial-gradient(circle, rgba(139,92,246,0.28), transparent 65%)',
+            }}
+            aria-hidden="true"
+          />
+
           <div
             className="inline-flex self-start items-center gap-2.5 px-3 py-2 rounded-full border border-[var(--line)] text-[#d8dfff] text-[0.88rem] font-bold"
             style={{ background: 'rgba(255,255,255,0.06)' }}
@@ -18,8 +33,11 @@ export default function Hero() {
             {hero.eyebrow}
           </div>
 
-          <h1 className="m-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[clamp(2.4rem,5vw,4rem)] text-[var(--text)]">
-            {hero.headline}
+          <h1 className="m-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[clamp(3.2rem,5.5vw,5rem)] text-[var(--text)]">
+            Building<br />
+            teams that<br />
+            ship with<br />
+            confidence.
           </h1>
 
           <p className="text-[1.05rem] leading-relaxed text-[var(--muted)] max-w-[52ch]">
@@ -50,11 +68,11 @@ export default function Hero() {
           </div>
 
           {/* Topic tags */}
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex flex-nowrap gap-2 overflow-x-auto">
             {hero.topicTags.map((tag) => (
               <span
                 key={tag}
-                className="px-[14px] py-[10px] rounded-full border border-[var(--line)] text-[#d7ddf8] text-[0.92rem]"
+                className="shrink-0 px-3 py-1.5 rounded-full border border-[var(--line)] text-[#d7ddf8] text-[0.75rem] font-medium whitespace-nowrap"
                 style={{ background: 'rgba(255,255,255,0.05)' }}
               >
                 {tag}
@@ -63,7 +81,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right column — 2×2 stat grid */}
+        {/* Right column — 2×2 stat grid, centred in panel */}
         <div className="relative">
           <div
             className="absolute inset-0 rounded-[var(--radius)] blur-3xl"
@@ -79,11 +97,11 @@ export default function Hero() {
               {achievements.map((a) => (
                 <div
                   key={a.label}
-                  className="flex flex-col gap-1 p-4 rounded-[20px] border border-[var(--line)]"
+                  className="flex flex-col gap-1.5 p-5 rounded-[20px] border border-[var(--line)]"
                   style={{ background: 'rgba(255,255,255,0.04)' }}
                 >
                   <strong
-                    className="text-[2rem] font-bold leading-none tracking-[-0.05em]"
+                    className="text-[1.75rem] font-bold leading-none tracking-[-0.05em]"
                     style={{ color: a.value === 'AI' ? 'var(--accent)' : 'var(--text)' }}
                   >
                     {a.value}
