@@ -45,8 +45,4 @@ tsconfig.tsbuildinfo
 .env*.local
 
 test-results/
-prd.md
-NicholasVella_CV.pdf:Zone.Identifier
-
-NicholasVella_CV.pdf
-prd-v2.md
+specs/

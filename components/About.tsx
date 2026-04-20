@@ -1,19 +1,65 @@
 import about from '@/data/about'
 
+const rightCards = [
+  {
+    title: 'Leadership style',
+    body: 'Clear ownership, short feedback loops, and a calm bias toward action.',
+  },
+  {
+    title: 'Best-fit environments',
+    body: 'Scale-up teams, regulated products, and businesses that need dependable execution.',
+  },
+  {
+    title: 'Current edge',
+    body: 'Applying AI-assisted workflows where they improve speed, quality, and delivery confidence.',
+  },
+]
+
 export default function About() {
   return (
-    <section aria-label="About" className="w-full max-w-5xl mx-auto px-6 py-16">
-      <h2 className="text-2xl font-semibold text-zinc-100 mb-6">About</h2>
-      <div className="max-w-3xl flex flex-col gap-6">
-        <p className="text-zinc-300 leading-relaxed">{about.paragraph}</p>
-        <ul className="flex flex-col gap-3">
-          {about.bullets.map((bullet) => (
-            <li key={bullet} className="flex items-start gap-3 text-zinc-300">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" aria-hidden="true" />
-              {bullet}
-            </li>
+    <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
+      <div className="mb-10">
+        <p className="text-xs font-bold uppercase tracking-widest mb-3 text-[var(--accent)]">
+          About
+        </p>
+        <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--text)]">
+          How I work.
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+        {/* Left — paragraph + principles */}
+        <div className="flex flex-col gap-6">
+          <p className="text-base leading-relaxed text-[var(--muted)]">{about.paragraph}</p>
+          <ul className="m-0 p-0 list-none grid gap-3">
+            {about.bullets.map((bullet) => (
+              <li key={bullet} className="relative pl-[18px] text-[#e7ebff] text-sm">
+                <span
+                  className="absolute left-0 top-[0.65em] w-2 h-2 rounded-full"
+                  style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-2))' }}
+                  aria-hidden="true"
+                />
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right — 3 stacked cards */}
+        <div className="flex flex-col gap-4">
+          {rightCards.map((card) => (
+            <div
+              key={card.title}
+              className="flex flex-col gap-2 p-5 rounded-[var(--radius)] border border-[var(--line)]"
+              style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
+            >
+              <strong className="block text-sm text-[var(--text)]">{card.title}</strong>
+              <span className="text-sm leading-relaxed text-[var(--muted)]">{card.body}</span>
+            </div>
           ))}
-        </ul>
+        </div>
+
       </div>
     </section>
   )

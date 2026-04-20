@@ -1,5 +1,8 @@
+import Nav from '@/components/Nav'
+import BackToTop from '@/components/BackToTop'
+import StickyLinkedIn from '@/components/StickyLinkedIn'
 import Hero from '@/components/Hero'
-import Achievements from '@/components/Achievements'
+import WhatIBring from '@/components/WhatIBring'
 import Delivered from '@/components/Delivered'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
@@ -7,17 +10,16 @@ import Contact from '@/components/Contact'
 export default function Home() {
   return (
     <>
-      <header className="w-full flex flex-col items-center">
+      <Nav />
+      <main id="top" className="w-full flex flex-col items-center">
         <Hero />
-      </header>
-      <main className="w-full flex flex-col items-center">
-        <Achievements />
+        <WhatIBring />
         <Delivered />
         <About />
-      </main>
-      <footer className="w-full flex flex-col items-center">
         <Contact />
-      </footer>
+      </main>
+      <BackToTop />
+      <StickyLinkedIn />
     </>
   )
 }

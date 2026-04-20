@@ -9,14 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'rgb(9 9 11)',      // zinc-950
-        surface: 'rgb(24 24 27)',       // zinc-900
-        accent: 'rgb(99 102 241)',      // indigo-500
-        'accent-hover': 'rgb(79 70 229)', // indigo-600
+        background: '#080B14',
+        accent: '#7C3AED',
+        'accent-hover': '#8B5CF6',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
