@@ -3,7 +3,7 @@ import deliveries from '@/data/deliveries'
 const categoryLabels: Record<string, string> = {
   'Fintech / Regulatory': 'Fintech / Regulatory',
   'Multi-Market iGaming': 'Multi-market iGaming',
-  'Organization Scaling': 'Org Scaling',
+  'Organization Scaling': 'Organization Scaling',
 }
 
 const cardData: Record<string, { title: string; summary: string; bullets: string[] }> = {
