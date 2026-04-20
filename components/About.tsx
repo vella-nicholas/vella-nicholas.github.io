@@ -17,7 +17,7 @@ const rightCards = [
 
 export default function About() {
   return (
-    <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7">
+    <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
       <div className="mb-10">
         <p className="text-xs font-bold uppercase tracking-widest mb-3 text-[var(--accent)]">
           About

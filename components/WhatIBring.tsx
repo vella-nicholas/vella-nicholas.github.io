@@ -19,7 +19,7 @@ const cards = [
 
 export default function WhatIBring() {
   return (
-    <section id="impact" aria-label="What I bring" className="w-full max-w-[1180px] mx-auto px-4 py-7">
+    <section id="impact" aria-label="What I bring" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
       <p className="text-xs font-bold uppercase tracking-widest mb-6 text-[var(--accent)]">
         What I bring
       </p>
