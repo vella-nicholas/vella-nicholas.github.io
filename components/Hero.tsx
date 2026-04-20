@@ -11,7 +11,7 @@ export default function Hero() {
 
         {/* Left column — glass card */}
         <div
-          className="relative overflow-hidden flex flex-col gap-6 rounded-[var(--radius)] border border-[var(--line)] p-[42px]"
+          className="relative overflow-hidden flex flex-col gap-5 rounded-[var(--radius)] border border-[var(--line)] p-6 sm:p-8 lg:p-[42px]"
           style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
         >
           {/* Bottom-right glow */}
@@ -33,11 +33,11 @@ export default function Hero() {
             {hero.eyebrow}
           </div>
 
-          <h1 className="m-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[clamp(3.2rem,5.5vw,5rem)] text-[var(--text)]">
-            Building<br />
-            teams that<br />
-            ship with<br />
-            confidence.
+          <h1 className="m-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[2.2rem] sm:text-[2.8rem] lg:text-[clamp(3.2rem,5.5vw,5rem)] text-[var(--text)]">
+            Building<br className="hidden sm:block" />
+            {' '}teams that<br className="hidden sm:block" />
+            {' '}ship with<br className="hidden sm:block" />
+            {' '}confidence.
           </h1>
 
           <p className="text-[1.05rem] leading-relaxed text-[var(--muted)] max-w-[52ch]">
@@ -45,7 +45,7 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-[14px]">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a
               href={hero.linkedInUrl}
               target="_blank"
@@ -68,11 +68,11 @@ export default function Hero() {
           </div>
 
           {/* Topic tags */}
-          <div className="flex flex-nowrap gap-2 overflow-x-auto">
+          <div className="grid grid-cols-2 sm:flex sm:flex-nowrap gap-2">
             {hero.topicTags.map((tag) => (
               <span
                 key={tag}
-                className="shrink-0 px-3 py-1.5 rounded-full border border-[var(--line)] text-[#d7ddf8] text-[0.75rem] font-medium whitespace-nowrap"
+                className="inline-flex items-center justify-center sm:justify-start px-3 py-1.5 rounded-full border border-[var(--line)] text-[#d7ddf8] text-[0.75rem] font-medium whitespace-nowrap"
                 style={{ background: 'rgba(255,255,255,0.05)' }}
               >
                 {tag}
