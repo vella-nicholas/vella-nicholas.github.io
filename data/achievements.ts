@@ -7,7 +7,7 @@ export interface Achievement {
 const achievements: Achievement[] = [
   { value: '15+', label: 'Engineers Led', sublabel: 'Across 3 delivery teams' },
   { value: '3→15', label: 'Team Scaled', sublabel: 'Built from the ground up' },
-  { value: '3', label: 'Markets Launched', sublabel: 'France, Canada, Latam' },
+  { value: '3', label: 'Regulatory Frameworks', sublabel: 'Brazil, Nigeria, Mexico' },
   { value: 'AI', label: 'Assisted Delivery', sublabel: 'Embedded in engineering workflow' },
 ]
 
