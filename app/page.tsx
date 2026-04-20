@@ -1,4 +1,6 @@
 import Nav from '@/components/Nav'
+import BackToTop from '@/components/BackToTop'
+import StickyLinkedIn from '@/components/StickyLinkedIn'
 import Hero from '@/components/Hero'
 import WhatIBring from '@/components/WhatIBring'
 import Delivered from '@/components/Delivered'
@@ -16,6 +18,8 @@ export default function Home() {
         <About />
         <Contact />
       </main>
+      <BackToTop />
+      <StickyLinkedIn />
     </>
   )
 }

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction"
-      className="w-full max-w-[1180px] mx-auto px-4 pt-[78px] pb-[42px]"
+      className="w-full max-w-[1180px] mx-auto px-4 pt-[36px] pb-[42px]"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 items-center">
 
@@ -44,8 +44,8 @@ export default function Hero() {
             {hero.subheadline}
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          {/* CTAs — sentinel id used by StickyLinkedIn to detect when this leaves viewport */}
+          <div id="hero-cta" className="flex flex-col sm:flex-row gap-3">
             <a
               href={hero.linkedInUrl}
               target="_blank"

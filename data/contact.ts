@@ -5,7 +5,7 @@ export interface ContactData {
 
 const contact: ContactData = {
   message:
-    "If you're looking for an engineering leader who delivers — not just manages — let's connect.",
+    "If you're looking for an engineering leader who combines delivery discipline with technical credibility, I'd be glad to hear from you.",
   linkedInUrl: 'https://www.linkedin.com/in/vella-nicholas/',
 }
 
