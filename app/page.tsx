@@ -9,17 +9,13 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <header className="w-full flex flex-col items-center">
+      <main id="top" className="w-full flex flex-col items-center">
         <Hero />
-      </header>
-      <main className="w-full flex flex-col items-center">
         <WhatIBring />
         <Delivered />
         <About />
-      </main>
-      <footer className="w-full">
         <Contact />
-      </footer>
+      </main>
     </>
   )
 }

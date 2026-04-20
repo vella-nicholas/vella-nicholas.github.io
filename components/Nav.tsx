@@ -14,26 +14,26 @@ export default function Nav() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)]"
+      className="sticky top-0 z-20 border-b border-[var(--line)]"
       style={{
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        backgroundColor: 'rgba(8, 11, 20, 0.85)',
+        backdropFilter: 'blur(14px)',
+        WebkitBackdropFilter: 'blur(14px)',
+        background: 'rgba(11,16,32,0.72)',
       }}
       aria-label="Site navigation"
     >
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="font-semibold text-sm tracking-tight text-[var(--text-primary)]">
+      <div className="w-full max-w-[1180px] mx-auto px-4 flex items-center justify-between py-4">
+        <a href="#top" className="font-extrabold tracking-[-0.03em] text-[1.05rem] text-[var(--text)]">
           Nicholas Vella
-        </span>
+        </a>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-5">
           {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
-              className="text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors focus-visible:outline-none focus-visible:underline"
+              className="text-[0.95rem] text-[var(--muted)] hover:text-[var(--text)] transition-colors"
             >
               {label}
             </a>
@@ -42,15 +42,16 @@ export default function Nav() {
             href={hero.linkedInUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium px-4 py-2 rounded-lg text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            className="inline-flex items-center justify-center px-[18px] py-[10px] rounded-full font-bold text-sm border border-[var(--line)] text-[var(--text)] transition-all hover:-translate-y-px hover:brightness-110"
+            style={{ background: 'rgba(255,255,255,0.04)' }}
           >
-            LinkedIn
+            Connect
           </a>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="md:hidden p-2 text-[var(--muted)] hover:text-[var(--text)] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -74,16 +75,13 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div
-          className="md:hidden border-t border-[var(--border)]"
-          style={{ backgroundColor: 'rgba(8, 11, 20, 0.97)' }}
-        >
-          <div className="flex flex-col gap-1 px-6 py-4">
+        <div className="md:hidden border-t border-[var(--line)]" style={{ background: 'rgba(11,16,32,0.97)' }}>
+          <div className="flex flex-col gap-1 px-4 py-4">
             {links.map(({ href, label }) => (
               <a
                 key={href}
                 href={href}
-                className="text-sm py-3 border-b border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+                className="text-sm py-3 border-b border-[var(--line)] text-[var(--muted)] hover:text-[var(--text)] transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {label}
@@ -93,7 +91,11 @@ export default function Nav() {
               href={hero.linkedInUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-sm font-medium px-4 py-3 rounded-lg text-center text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] transition-colors"
+              className="mt-4 text-sm font-bold px-4 py-3 rounded-full text-center text-white transition-all hover:-translate-y-px hover:brightness-110"
+              style={{
+                background: 'linear-gradient(135deg, var(--accent), #6d28d9)',
+                boxShadow: '0 10px 30px rgba(139,92,246,0.35)',
+              }}
               onClick={() => setOpen(false)}
             >
               Connect on LinkedIn

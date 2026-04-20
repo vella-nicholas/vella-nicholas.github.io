@@ -1,89 +1,89 @@
 import deliveries from '@/data/deliveries'
 
 const categoryLabels: Record<string, string> = {
-  'Fintech / Regulatory': 'Fintech',
-  'Multi-Market iGaming': 'iGaming',
-  'Org Scaling': 'Leadership',
+  'Fintech / Regulatory': 'Fintech / Regulatory',
+  'Multi-Market iGaming': 'Multi-market iGaming',
+  'Org Scaling': 'Org Scaling',
 }
 
-const cardBullets: Record<string, string[]> = {
-  'Fintech / Regulatory': [
-    'MiCA licence delivery under emerging EU regulation',
-    'KYC integration and Fan Token product launch',
-    'Regulatory approval and compliant market launch on schedule',
-  ],
-  'Multi-Market iGaming': [
-    'Simultaneous delivery across Brazil, Nigeria, and Mexico',
-    'Full regulatory alignment per market',
-    'Three localised launches within a single release cycle',
-  ],
-  'Org Scaling': [
-    'Grew engineering from 3 to 15 across 3 parallel delivery teams',
-    'Structured hiring, onboarding, and team enablement',
-    'Maintained delivery velocity throughout rapid growth',
-  ],
+const cardData: Record<string, { title: string; summary: string; bullets: string[] }> = {
+  'Fintech / Regulatory': {
+    title: 'From compliance pressure to launch readiness',
+    summary: 'Led engineering delivery for a crypto-asset platform navigating emerging EU regulation.',
+    bullets: [
+      'Drove MiCA licence delivery and KYC integration',
+      'Aligned engineering execution with regulatory expectations',
+      'Shipped a compliant product on schedule',
+    ],
+  },
+  'Multi-Market iGaming': {
+    title: 'Coordinated launches across multiple regulated markets',
+    summary: 'Led simultaneous delivery for a white-label sports betting platform expanding into emerging markets.',
+    bullets: [
+      'Delivered for Brazil, Nigeria, and Mexico',
+      'Managed localisation and market-specific constraints',
+      'Released all three within a single cycle',
+    ],
+  },
+  'Org Scaling': {
+    title: 'Built structure without slowing teams down',
+    summary: 'Helped transform an early-stage engineering setup into a more scalable organisation.',
+    bullets: [
+      'Scaled from 3 engineers to 15',
+      'Established parallel delivery teams and clearer ownership',
+      'Protected velocity while the organisation matured',
+    ],
+  },
 }
 
 export default function Delivered() {
   return (
-    <section
-      id="deliveries"
-      aria-label="Selected deliveries"
-      className="w-full max-w-5xl mx-auto px-6 py-16 sm:py-20"
-    >
-      <div className="mb-10">
-        <p className="text-xs font-medium uppercase tracking-widest mb-3 text-[var(--accent-hover)]">
-          Selected deliveries
+    <section id="deliveries" aria-label="Selected deliveries" className="w-full max-w-[1180px] mx-auto px-4 py-7">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-[22px]">
+        <div>
+          <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)]">
+            Selected deliveries
+          </h2>
+        </div>
+        <p className="m-0 text-[var(--muted)] md:max-w-[52ch] text-[0.95rem]">
+          A few examples of the environments, challenges, and outcomes I&apos;ve led across product, compliance, and team scale.
         </p>
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-primary)]">
-          Work that shipped.
-        </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {deliveries.map((card) => (
-          <div
-            key={card.title}
-            className="flex flex-col gap-5 p-6 rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[rgba(124,58,237,0.3)] transition-colors"
-            style={{ backdropFilter: 'blur(8px)' }}
-          >
-            {/* Category chip */}
-            <span
-              className="self-start text-xs font-medium uppercase tracking-widest px-2.5 py-1 rounded-full"
-              style={{
-                color: 'var(--accent-hover)',
-                borderColor: 'rgba(124, 58, 237, 0.3)',
-                backgroundColor: 'rgba(124, 58, 237, 0.08)',
-                border: '1px solid rgba(124, 58, 237, 0.3)',
-              }}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
+        {deliveries.map((delivery) => {
+          const data = cardData[delivery.title]
+          if (!data) return null
+          return (
+            <article
+              key={delivery.title}
+              className="p-[26px] rounded-[var(--radius)] border border-[var(--line)] flex flex-col gap-4 transition-all hover:-translate-y-px"
+              style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
             >
-              {categoryLabels[card.title] ?? card.title}
-            </span>
-
-            {/* Title + context */}
-            <div className="flex flex-col gap-2">
-              <h3 className="text-base font-semibold text-[var(--text-primary)]">
-                {card.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                {card.context}
-              </p>
-            </div>
-
-            {/* Outcome bullets */}
-            <ul className="flex flex-col gap-2 mt-auto">
-              {(cardBullets[card.title] ?? [card.focus, card.outcome]).map((bullet) => (
-                <li key={bullet} className="flex items-start gap-2.5 text-sm text-[var(--text-muted)]">
-                  <span
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-hover)]"
-                    aria-hidden="true"
-                  />
-                  {bullet}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+              <small className="inline-block text-[#d7ddf8] font-bold uppercase tracking-[0.08em] text-[0.74rem]">
+                {categoryLabels[delivery.title] ?? delivery.title}
+              </small>
+              <div>
+                <h3 className="m-0 mb-2.5 text-[1.28rem] tracking-[-0.03em] text-[var(--text)]">
+                  {data.title}
+                </h3>
+                <p className="m-0 text-[var(--muted)] text-[0.95rem]">{data.summary}</p>
+              </div>
+              <ul className="m-0 p-0 list-none grid gap-2.5 mt-auto">
+                {data.bullets.map((bullet) => (
+                  <li key={bullet} className="relative pl-[18px] text-[#e7ebff] text-[0.95rem]">
+                    <span
+                      className="absolute left-0 top-[0.68em] w-2 h-2 rounded-full"
+                      style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-2))' }}
+                      aria-hidden="true"
+                    />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

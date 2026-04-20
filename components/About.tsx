@@ -1,55 +1,42 @@
 import about from '@/data/about'
 
-const rightCards = [
+const timelineItems = [
   {
     title: 'Leadership style',
-    body: 'Involved, not distant. Close to the work, but focused on creating the conditions for others to thrive.',
+    body: 'Clear ownership, short feedback loops, and a calm bias toward action.',
   },
   {
     title: 'Best-fit environments',
-    body: 'Scaling teams, regulated industries, high-ownership cultures, and orgs that value craft alongside speed.',
+    body: 'Scale-up teams, regulated products, and businesses that need dependable execution.',
   },
   {
     title: 'Current edge',
-    body: 'AI-assisted delivery — integrating AI tooling into engineering workflows to raise team output without raising headcount.',
+    body: 'Applying AI-assisted workflows where they improve speed, quality, and delivery confidence.',
   },
 ]
 
 export default function About() {
   return (
-    <section
-      id="about"
-      aria-label="About"
-      className="w-full max-w-5xl mx-auto px-6 py-16 sm:py-20"
-    >
-      <div className="mb-10">
-        <p
-          className="text-xs font-medium uppercase tracking-widest mb-3"
-          style={{ color: 'var(--accent-hover)' }}
-        >
-          About
-        </p>
-        <h2
-          className="text-2xl sm:text-3xl font-bold tracking-tight"
-          style={{ color: 'var(--text-primary)' }}
-        >
-          How I work.
-        </h2>
-      </div>
+    <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-[18px]">
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-
-        {/* Left — paragraph + principles */}
-        <div className="flex flex-col gap-6">
-          <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-            {about.paragraph}
-          </p>
-          <ul className="flex flex-col gap-3">
+        {/* Quote / paragraph card */}
+        <div
+          className="p-[30px] rounded-[var(--radius)] border border-[var(--line)]"
+          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
+        >
+          <div className="mb-3">
+            <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)]">
+              About
+            </h2>
+          </div>
+          <p className="mt-0 text-[var(--muted)] leading-relaxed">{about.paragraph}</p>
+          <ul className="m-0 p-0 list-none grid gap-2.5">
             {about.bullets.map((bullet) => (
-              <li key={bullet} className="flex items-start gap-3 text-sm" style={{ color: 'var(--text-muted)' }}>
+              <li key={bullet} className="relative pl-[18px] text-[#e7ebff] text-[0.95rem]">
                 <span
-                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
-                  style={{ backgroundColor: 'var(--accent-hover)' }}
+                  className="absolute left-0 top-[0.68em] w-2 h-2 rounded-full"
+                  style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-2))' }}
                   aria-hidden="true"
                 />
                 {bullet}
@@ -58,24 +45,16 @@ export default function About() {
           </ul>
         </div>
 
-        {/* Right — 3 cards */}
-        <div className="flex flex-col gap-4">
-          {rightCards.map((card) => (
+        {/* Timeline cards */}
+        <div className="grid gap-[14px] content-start">
+          {timelineItems.map((item) => (
             <div
-              key={card.title}
-              className="flex flex-col gap-2 p-5 rounded-xl border"
-              style={{
-                backgroundColor: 'var(--surface)',
-                borderColor: 'var(--border)',
-                backdropFilter: 'blur(8px)',
-              }}
+              key={item.title}
+              className="px-5 py-[18px] rounded-[var(--radius)] border border-[var(--line)]"
+              style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
             >
-              <h3 className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
-                {card.title}
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                {card.body}
-              </p>
+              <strong className="block mb-1.5 text-[var(--text)]">{item.title}</strong>
+              <span className="text-[var(--muted)] text-[0.95rem]">{item.body}</span>
             </div>
           ))}
         </div>
