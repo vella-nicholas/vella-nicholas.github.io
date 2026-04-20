@@ -3,47 +3,31 @@ import achievements from '@/data/achievements'
 
 export default function Hero() {
   return (
-    <section aria-label="Introduction" className="w-full max-w-[1180px] mx-auto px-4 pt-[78px] pb-[42px]">
-      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 items-stretch">
+    <section
+      aria-label="Introduction"
+      className="w-full max-w-[1180px] mx-auto px-4 pt-[78px] pb-[42px]"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center">
 
-        {/* Hero copy card */}
-        <div
-          className="relative overflow-hidden rounded-[var(--radius)] border border-[var(--line)] p-[42px]"
-          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-        >
-          {/* Bottom-right glow */}
+        {/* Left column */}
+        <div className="flex flex-col gap-6">
           <div
-            className="absolute pointer-events-none"
-            style={{
-              inset: 'auto -30px -30px auto',
-              width: 180,
-              height: 180,
-              background: 'radial-gradient(circle, rgba(139,92,246,0.28), transparent 65%)',
-            }}
-            aria-hidden="true"
-          />
-
-          {/* Eyebrow pill */}
-          <div
-            className="inline-flex items-center gap-2.5 px-3 py-2 rounded-full border border-[rgba(255,255,255,0.08)] text-[#d8dfff] text-[0.88rem] font-bold mb-[18px]"
+            className="inline-flex self-start items-center gap-2.5 px-3 py-2 rounded-full border border-[var(--line)] text-[#d8dfff] text-[0.88rem] font-bold"
             style={{ background: 'rgba(255,255,255,0.06)' }}
           >
             {hero.eyebrow}
           </div>
 
-          <h1
-            className="mt-0 mb-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[clamp(2.4rem,5vw,4.6rem)]"
-            style={{ maxWidth: '11ch' }}
-          >
+          <h1 className="m-0 font-extrabold tracking-[-0.05em] leading-[0.98] text-[clamp(2.4rem,5vw,4rem)] text-[var(--text)]">
             {hero.headline}
           </h1>
 
-          <p className="text-[1.08rem] text-[var(--muted)] mt-5 mb-[26px]" style={{ maxWidth: '58ch' }}>
+          <p className="text-[1.05rem] leading-relaxed text-[var(--muted)] max-w-[52ch]">
             {hero.subheadline}
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-[14px] mb-7">
+          <div className="flex flex-wrap gap-[14px]">
             <a
               href={hero.linkedInUrl}
               target="_blank"
@@ -70,7 +54,7 @@ export default function Hero() {
             {hero.topicTags.map((tag) => (
               <span
                 key={tag}
-                className="px-[14px] py-[10px] rounded-full border border-[rgba(255,255,255,0.08)] text-[#d7ddf8] text-[0.92rem]"
+                className="px-[14px] py-[10px] rounded-full border border-[var(--line)] text-[#d7ddf8] text-[0.92rem]"
                 style={{ background: 'rgba(255,255,255,0.05)' }}
               >
                 {tag}
@@ -79,26 +63,40 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats panel card */}
-        <aside
-          className="rounded-[var(--radius)] border border-[var(--line)] p-6 grid gap-[14px] content-start"
-          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-          aria-label="Impact metrics"
-        >
-          <p className="m-0 text-[0.95rem] text-[var(--muted)] font-semibold mb-1.5">Selected impact</p>
-          {achievements.map((a) => (
-            <div
-              key={a.value}
-              className="px-[18px] py-[18px] rounded-[20px] border border-[rgba(255,255,255,0.08)]"
-              style={{ background: 'rgba(255,255,255,0.05)' }}
-            >
-              <strong className="block text-[2rem] leading-none mb-2 tracking-[-0.05em] text-[var(--text)]">
-                {a.value}
-              </strong>
-              <span className="text-[var(--muted)] text-[0.95rem]">{a.description}</span>
+        {/* Right column — 2×2 stat grid */}
+        <div className="relative">
+          <div
+            className="absolute inset-0 rounded-[var(--radius)] blur-3xl"
+            style={{ background: 'rgba(139,92,246,0.12)' }}
+            aria-hidden="true"
+          />
+          <aside
+            className="relative rounded-[var(--radius)] border border-[var(--line)] p-6"
+            style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
+            aria-label="Impact metrics"
+          >
+            <div className="grid grid-cols-2 gap-3">
+              {achievements.map((a) => (
+                <div
+                  key={a.label}
+                  className="flex flex-col gap-1 p-4 rounded-[20px] border border-[var(--line)]"
+                  style={{ background: 'rgba(255,255,255,0.04)' }}
+                >
+                  <strong
+                    className="text-[2rem] font-bold leading-none tracking-[-0.05em]"
+                    style={{ color: a.value === 'AI' ? 'var(--accent)' : 'var(--text)' }}
+                  >
+                    {a.value}
+                  </strong>
+                  <span className="text-sm font-semibold text-[var(--text)]">{a.label}</span>
+                  {a.sublabel && (
+                    <span className="text-xs leading-snug text-[var(--muted)]">{a.sublabel}</span>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </aside>
+          </aside>
+        </div>
 
       </div>
     </section>

@@ -1,13 +1,14 @@
 export interface Achievement {
   value: string
-  description: string
+  label: string
+  sublabel?: string
 }
 
 const achievements: Achievement[] = [
-  { value: '15+', description: 'Engineers led across multiple teams and delivery streams' },
-  { value: '3→15', description: 'Scaled an engineering organisation while maintaining delivery velocity' },
-  { value: '3', description: 'Major regulatory frameworks navigated: MGA, ARJEL, and iGO' },
-  { value: 'AI', description: 'AI-assisted delivery embedded across the engineering workflow' },
+  { value: '15+', label: 'Engineers Led', sublabel: 'Across 3 delivery teams' },
+  { value: '3→15', label: 'Team Scaled', sublabel: 'Built from the ground up' },
+  { value: '3', label: 'Major Regulatory Frameworks', sublabel: 'MGA, ARJEL, iGO' },
+  { value: 'AI', label: 'Assisted Delivery', sublabel: 'Embedded in engineering workflow' },
 ]
 
 export default achievements

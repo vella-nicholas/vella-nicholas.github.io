@@ -1,6 +1,6 @@
 import about from '@/data/about'
 
-const timelineItems = [
+const rightCards = [
   {
     title: 'Leadership style',
     body: 'Clear ownership, short feedback loops, and a calm bias toward action.',
@@ -18,24 +18,25 @@ const timelineItems = [
 export default function About() {
   return (
     <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7">
-      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-[18px]">
+      <div className="mb-10">
+        <p className="text-xs font-bold uppercase tracking-widest mb-3 text-[var(--accent)]">
+          About
+        </p>
+        <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--text)]">
+          How I work.
+        </h2>
+      </div>
 
-        {/* Quote / paragraph card */}
-        <div
-          className="p-[30px] rounded-[var(--radius)] border border-[var(--line)]"
-          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-        >
-          <div className="mb-3">
-            <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)]">
-              About
-            </h2>
-          </div>
-          <p className="mt-0 text-[var(--muted)] leading-relaxed">{about.paragraph}</p>
-          <ul className="m-0 p-0 list-none grid gap-2.5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+        {/* Left — paragraph + principles */}
+        <div className="flex flex-col gap-6">
+          <p className="text-base leading-relaxed text-[var(--muted)]">{about.paragraph}</p>
+          <ul className="m-0 p-0 list-none grid gap-3">
             {about.bullets.map((bullet) => (
-              <li key={bullet} className="relative pl-[18px] text-[#e7ebff] text-[0.95rem]">
+              <li key={bullet} className="relative pl-[18px] text-[#e7ebff] text-sm">
                 <span
-                  className="absolute left-0 top-[0.68em] w-2 h-2 rounded-full"
+                  className="absolute left-0 top-[0.65em] w-2 h-2 rounded-full"
                   style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-2))' }}
                   aria-hidden="true"
                 />
@@ -45,16 +46,16 @@ export default function About() {
           </ul>
         </div>
 
-        {/* Timeline cards */}
-        <div className="grid gap-[14px] content-start">
-          {timelineItems.map((item) => (
+        {/* Right — 3 stacked cards */}
+        <div className="flex flex-col gap-4">
+          {rightCards.map((card) => (
             <div
-              key={item.title}
-              className="px-5 py-[18px] rounded-[var(--radius)] border border-[var(--line)]"
+              key={card.title}
+              className="flex flex-col gap-2 p-5 rounded-[var(--radius)] border border-[var(--line)]"
               style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
             >
-              <strong className="block mb-1.5 text-[var(--text)]">{item.title}</strong>
-              <span className="text-[var(--muted)] text-[0.95rem]">{item.body}</span>
+              <strong className="block text-sm text-[var(--text)]">{card.title}</strong>
+              <span className="text-sm leading-relaxed text-[var(--muted)]">{card.body}</span>
             </div>
           ))}
         </div>
