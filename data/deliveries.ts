@@ -17,14 +17,14 @@ const deliveries: DeliveryCard[] = [
   },
   {
     title: 'Multi-Market iGaming',
-    context: 'White-label sports betting platform expanding across emerging markets',
+    context: 'White-label online casino platform expanding across emerging markets',
     role: 'Engineering Lead',
     focus: 'Simultaneous delivery across Brazil, Nigeria, and Mexico',
     outcome:
       'Launched 3 localised markets within a single release cycle with full regulatory alignment.',
   },
   {
-    title: 'Org Scaling',
+    title: 'Organization Scaling',
     context: 'Early-stage product team growing into a structured engineering organisation',
     role: 'Head of Engineering',
     focus: 'Hiring, structuring, and enabling 3 parallel delivery teams',

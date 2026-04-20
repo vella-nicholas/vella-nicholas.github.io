@@ -13,8 +13,8 @@ const hero: HeroData = {
   eyebrow: 'Engineering leadership • Delivery • Scale',
   headline: 'Building teams that ship with confidence.',
   subheadline:
-    '10+ years across fintech, iGaming, and cloud platforms — from hands-on engineering to leading teams of 15.',
-  topicTags: ['Fintech', 'Regulated platforms', 'Org scaling', 'AI-assisted delivery'],
+    '12+ years across fintech, iGaming, and affiliate marketing — from hands-on engineering to leading teams of 15.',
+  topicTags: ['Fintech', 'Regulated platforms', 'Organization scaling', 'AI-assisted delivery'],
   linkedInUrl: 'https://www.linkedin.com/in/vella-nicholas/',
   secondaryCta: "See what I've delivered",
 }
