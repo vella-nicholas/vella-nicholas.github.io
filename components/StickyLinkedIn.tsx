@@ -18,11 +18,8 @@ export default function StickyLinkedIn() {
   }, [])
 
   return (
-    <>
-
-      {/* Mobile-only sticky bar below the nav */}
-      <div
-        className="md:hidden fixed top-16 left-0 right-0 z-40 border-b border-[var(--line)] transition-all duration-300"
+    <div
+      className="md:hidden fixed top-16 left-0 right-0 z-40 border-b border-[var(--line)] transition-all duration-300"
         style={{
           backdropFilter: 'blur(14px)',
           WebkitBackdropFilter: 'blur(14px)',
@@ -47,7 +44,6 @@ export default function StickyLinkedIn() {
           </svg>
           Connect on LinkedIn
         </a>
-      </div>
-    </>
+    </div>
   )
 }

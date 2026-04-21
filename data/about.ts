@@ -1,6 +1,12 @@
+export interface AboutCard {
+  title: string
+  body: string
+}
+
 export interface AboutData {
   paragraph: string
   bullets: string[]
+  cards: AboutCard[]
 }
 
 const about: AboutData = {
@@ -10,6 +16,20 @@ const about: AboutData = {
     'Hands-on enough to unblock — never too far from the code',
     'Delivery over ceremony — process should serve the team, not the other way around',
     'People-first — I invest in hiring well, mentoring deliberately, and growing engineers into leaders',
+  ],
+  cards: [
+    {
+      title: 'Leadership style',
+      body: 'Clear ownership, short feedback loops, and a calm bias toward action.',
+    },
+    {
+      title: 'Best-fit environments',
+      body: 'Scale-up teams, regulated products, and businesses that need dependable execution.',
+    },
+    {
+      title: 'Current edge',
+      body: 'Applying AI-assisted workflows where they improve speed, quality, and delivery confidence.',
+    },
   ],
 }
 
