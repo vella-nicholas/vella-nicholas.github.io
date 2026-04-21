@@ -1,20 +1,5 @@
 import about from '@/data/about'
 
-const rightCards = [
-  {
-    title: 'Leadership style',
-    body: 'Clear ownership, short feedback loops, and a calm bias toward action.',
-  },
-  {
-    title: 'Best-fit environments',
-    body: 'Scale-up teams, regulated products, and businesses that need dependable execution.',
-  },
-  {
-    title: 'Current edge',
-    body: 'Applying AI-assisted workflows where they improve speed, quality, and delivery confidence.',
-  },
-]
-
 export default function About() {
   return (
     <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
@@ -29,7 +14,6 @@ export default function About() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
-        {/* Left — paragraph + principles */}
         <div className="flex flex-col gap-6">
           <p className="text-base leading-relaxed text-[var(--muted)]">{about.paragraph}</p>
           <ul className="m-0 p-0 list-none grid gap-3">
@@ -46,9 +30,8 @@ export default function About() {
           </ul>
         </div>
 
-        {/* Right — 3 stacked cards */}
         <div className="flex flex-col gap-4">
-          {rightCards.map((card) => (
+          {about.cards.map((card) => (
             <div
               key={card.title}
               className="flex flex-col gap-2 p-5 rounded-[var(--radius)] border border-[var(--line)]"

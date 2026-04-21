@@ -6,7 +6,10 @@ export default function BackToTop() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 400)
+    const onScroll = () => {
+      const next = window.scrollY > 400
+      setVisible((prev) => (prev === next ? prev : next))
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -15,7 +18,7 @@ export default function BackToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Back to top"
-      className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center w-11 h-11 rounded-full border border-[var(--line)] text-[var(--text)] transition-all duration-300 hover:-translate-x-1/2 hover:-translate-y-1 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+      className="md:hidden fixed bottom-8 left-1/2 z-50 flex items-center justify-center w-11 h-11 rounded-full border border-[var(--line)] text-[var(--text)] transition-all duration-300 hover:-translate-y-1 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
       style={{
         background: 'rgba(255,255,255,0.18)',
         backdropFilter: 'blur(12px)',

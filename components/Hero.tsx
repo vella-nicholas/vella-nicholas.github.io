@@ -9,12 +9,10 @@ export default function Hero() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 items-center">
 
-        {/* Left column — glass card */}
         <div
           className="relative overflow-hidden flex flex-col gap-5 rounded-[var(--radius)] border border-[var(--line)] p-6 sm:p-8 lg:p-[42px]"
           style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
         >
-          {/* Bottom-right glow */}
           <div
             className="absolute pointer-events-none"
             style={{
@@ -67,7 +65,6 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Topic tags */}
           <div className="grid grid-cols-2 sm:flex sm:flex-nowrap gap-2">
             {hero.topicTags.map((tag) => (
               <span
@@ -81,7 +78,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right column — 2×2 stat grid, centred in panel */}
         <div className="relative">
           <div
             className="absolute inset-0 rounded-[var(--radius)] blur-3xl"
@@ -102,7 +98,7 @@ export default function Hero() {
                 >
                   <strong
                     className="text-[1.75rem] font-bold leading-none tracking-[-0.05em]"
-                    style={{ color: a.value === 'AI' ? 'var(--accent)' : 'var(--text)' }}
+                    style={{ color: a.highlight ? 'var(--accent)' : 'var(--text)' }}
                   >
                     {a.value}
                   </strong>
