@@ -2,6 +2,7 @@ import hero from '@/data/hero'
 import achievements from '@/data/achievements'
 import { HERO_CTA_ID } from '@/hooks/useHeroCTAVisibility'
 import LinkedInButton from '@/components/LinkedInButton'
+import Card from '@/components/Card'
 
 export default function Hero() {
   return (
@@ -11,10 +12,7 @@ export default function Hero() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-7 items-center">
 
-        <div
-          className="relative overflow-hidden flex flex-col gap-5 rounded-[var(--radius)] border border-[var(--line)] p-6 sm:p-8 lg:p-[42px]"
-          style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-        >
+        <Card padding="responsive" className="relative overflow-hidden flex flex-col gap-5">
           <div
             className="absolute pointer-events-none"
             style={{
@@ -67,7 +65,7 @@ export default function Hero() {
               </span>
             ))}
           </div>
-        </div>
+        </Card>
 
         <div className="relative">
           <div
@@ -75,11 +73,7 @@ export default function Hero() {
             style={{ background: 'rgba(139,92,246,0.12)' }}
             aria-hidden="true"
           />
-          <aside
-            className="relative rounded-[var(--radius)] border border-[var(--line)] p-6"
-            style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-            aria-label="Impact metrics"
-          >
+          <Card as="aside" padding="p-6" className="relative" aria-label="Impact metrics">
             <div className="grid grid-cols-2 gap-3">
               {achievements.map((a) => (
                 <div
@@ -100,7 +94,7 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-          </aside>
+          </Card>
         </div>
 
       </div>
