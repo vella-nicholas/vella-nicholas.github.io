@@ -1,6 +1,7 @@
 import hero from '@/data/hero'
 import achievements from '@/data/achievements'
 import { HERO_CTA_ID } from '@/hooks/useHeroCTAVisibility'
+import LinkedInButton from '@/components/LinkedInButton'
 
 export default function Hero() {
   return (
@@ -45,21 +46,10 @@ export default function Hero() {
 
           {/* CTAs — sentinel id used by StickyLinkedIn to detect when this leaves viewport */}
           <div id={HERO_CTA_ID} className="flex flex-col sm:flex-row gap-3">
-            <a
-              href={hero.linkedInUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-[18px] py-[14px] rounded-full font-bold text-sm text-white transition-all hover:-translate-y-px hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{
-                background: 'linear-gradient(135deg, var(--accent), #6d28d9)',
-                boxShadow: '0 10px 30px rgba(139,92,246,0.35)',
-              }}
-            >
-              Connect on LinkedIn
-            </a>
+            <LinkedInButton />
             <a
               href="#deliveries"
-              className="inline-flex items-center justify-center gap-2.5 px-[18px] py-[14px] rounded-full font-bold text-sm text-[var(--text)] border border-[var(--line)] transition-all hover:-translate-y-px hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="inline-flex items-center justify-center gap-2.5 px-[18px] py-[14px] rounded-full font-bold text-sm leading-none text-[var(--text)] border border-[var(--line)] transition-all hover:-translate-y-px hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               style={{ background: 'rgba(255,255,255,0.04)' }}
             >
               {hero.secondaryCta}

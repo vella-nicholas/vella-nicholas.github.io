@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import hero from '@/data/hero'
+import LinkedInButton from '@/components/LinkedInButton'
+import { useHeroCTAVisibility } from '@/hooks/useHeroCTAVisibility'
 
 const links = [
   { href: '#impact', label: 'Impact' },
@@ -11,10 +12,11 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const stickyBarVisible = !useHeroCTAVisibility()
 
   return (
     <nav
-      className="sticky top-0 z-20 border-b border-[var(--line)]"
+      className="sticky top-0 z-50 border-b border-[var(--line)]"
       style={{
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
@@ -38,15 +40,7 @@ export default function Nav() {
               {label}
             </a>
           ))}
-          <a
-            href={hero.linkedInUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-[18px] py-[10px] rounded-full font-bold text-sm border border-[var(--line)] text-[var(--text)] transition-all hover:-translate-y-px hover:brightness-110"
-            style={{ background: 'rgba(255,255,255,0.04)' }}
-          >
-            Connect
-          </a>
+          <LinkedInButton variant="nav" />
         </div>
 
         {/* Mobile hamburger */}
@@ -74,35 +68,24 @@ export default function Nav() {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t border-[var(--line)]" style={{ background: 'rgba(11,16,32,0.97)' }}>
-          <div className="flex flex-col gap-1 px-4 py-4">
+      <div
+        className={`md:hidden overflow-hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+      >
+        <div className="min-h-0 border-t border-[var(--line)]" style={{ background: 'rgba(11,16,32,0.97)' }}>
+          <div className={`flex flex-col px-4 pb-1 transition-opacity ${open ? 'opacity-100 duration-200 delay-100' : 'opacity-0 duration-150 delay-0'} ${stickyBarVisible ? 'pt-10' : 'pt-1'}`}>
             {links.map(({ href, label }) => (
               <a
                 key={href}
                 href={href}
-                className="text-sm py-3 border-b border-[var(--line)] text-[var(--muted)] hover:text-[var(--text)] transition-colors"
+                className="flex items-center text-sm py-3 border-b border-[var(--line)] last:border-b-0 text-[var(--muted)] hover:text-[var(--text)] transition-colors"
                 onClick={() => setOpen(false)}
               >
                 {label}
               </a>
             ))}
-            <a
-              href={hero.linkedInUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 text-sm font-bold px-4 py-3 rounded-full text-center text-white transition-all hover:-translate-y-px hover:brightness-110"
-              style={{
-                background: 'linear-gradient(135deg, var(--accent), #6d28d9)',
-                boxShadow: '0 10px 30px rgba(139,92,246,0.35)',
-              }}
-              onClick={() => setOpen(false)}
-            >
-              Connect on LinkedIn
-            </a>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   )
 }
