@@ -1,6 +1,7 @@
 import deliveries from '@/data/deliveries'
 import Section from '@/components/Section'
 import SectionHeader from '@/components/SectionHeader'
+import Card from '@/components/Card'
 
 export default function Delivered() {
   return (
@@ -9,11 +10,7 @@ export default function Delivered() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
         {deliveries.map((card) => (
-          <article
-            key={card.category}
-            className="p-[26px] rounded-[var(--radius)] border border-[var(--line)] flex flex-col gap-4 transition-all hover:-translate-y-px"
-            style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
-          >
+          <Card as="article" key={card.category} padding="p-[26px]" hover className="flex flex-col gap-4">
             <small className="inline-block text-[#d7ddf8] font-bold uppercase tracking-[0.08em] text-[0.74rem]">
               {card.category}
             </small>
@@ -35,7 +32,7 @@ export default function Delivered() {
                 </li>
               ))}
             </ul>
-          </article>
+          </Card>
         ))}
       </div>
     </Section>
