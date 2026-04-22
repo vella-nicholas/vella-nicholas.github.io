@@ -1,5 +1,6 @@
 import hero from '@/data/hero'
 import achievements from '@/data/achievements'
+import { HERO_CTA_ID } from '@/hooks/useHeroCTAVisibility'
 
 export default function Hero() {
   return (
@@ -43,7 +44,7 @@ export default function Hero() {
           </p>
 
           {/* CTAs — sentinel id used by StickyLinkedIn to detect when this leaves viewport */}
-          <div id="hero-cta" className="flex flex-col sm:flex-row gap-3">
+          <div id={HERO_CTA_ID} className="flex flex-col sm:flex-row gap-3">
             <a
               href={hero.linkedInUrl}
               target="_blank"

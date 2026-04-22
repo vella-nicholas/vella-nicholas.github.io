@@ -1,21 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import hero from '@/data/hero'
+import { useHeroCTAVisibility } from '@/hooks/useHeroCTAVisibility'
 
 export default function StickyLinkedIn() {
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = document.getElementById('hero-cta')
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { rootMargin: '-64px 0px 0px 0px', threshold: 0 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
+  const heroCTAVisible = useHeroCTAVisibility()
+  const visible = !heroCTAVisible
 
   return (
     <div
