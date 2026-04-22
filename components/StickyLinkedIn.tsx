@@ -9,6 +9,7 @@ export default function StickyLinkedIn() {
 
   return (
     <div
+      id="sticky-linkedin"
       className="md:hidden fixed top-16 left-0 right-0 z-[60] flex border-b border-[var(--line)] transition-all duration-300"
         style={{
           backdropFilter: 'blur(14px)',

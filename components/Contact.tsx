@@ -1,9 +1,10 @@
 import contact from '@/data/contact'
 import LinkedInButton from '@/components/LinkedInButton'
+import Section from '@/components/Section'
 
 export default function Contact() {
   return (
-    <section aria-label="Contact" className="w-full max-w-[1180px] mx-auto px-4 py-7 pb-16">
+    <Section ariaLabel="Contact" className="pb-16">
       <div
         className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-7 rounded-[var(--radius)] border border-[var(--line)]"
         style={{ background: 'var(--card)', boxShadow: 'var(--shadow)' }}
@@ -19,6 +20,6 @@ export default function Contact() {
 
         <LinkedInButton className="shrink-0" />
       </div>
-    </section>
+    </Section>
   )
 }

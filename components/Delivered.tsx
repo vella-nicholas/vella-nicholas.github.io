@@ -1,16 +1,11 @@
 import deliveries from '@/data/deliveries'
+import Section from '@/components/Section'
+import SectionHeader from '@/components/SectionHeader'
 
 export default function Delivered() {
   return (
-    <section id="deliveries" aria-label="Selected deliveries" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
-      <div className="mb-10">
-        <p className="text-xs font-bold uppercase tracking-widest mb-3 text-[var(--accent)]">
-          Selected deliveries
-        </p>
-        <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--text)]">
-          Work that shipped.
-        </h2>
-      </div>
+    <Section id="deliveries" ariaLabel="Selected deliveries">
+      <SectionHeader label="Selected deliveries" heading="Work that shipped." />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px]">
         {deliveries.map((card) => (
@@ -43,6 +38,6 @@ export default function Delivered() {
           </article>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }
