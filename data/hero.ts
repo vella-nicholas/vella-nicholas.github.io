@@ -1,7 +1,6 @@
 export interface HeroData {
   name: string
   eyebrow: string
-  headline: string
   subheadline: string
   topicTags: string[]
   linkedInUrl: string
@@ -11,7 +10,6 @@ export interface HeroData {
 const hero: HeroData = {
   name: 'Nicholas Vella',
   eyebrow: 'Engineering leadership • Delivery • Scale',
-  headline: 'Building teams that ship with confidence.',
   subheadline:
     '12+ years across fintech, iGaming, and affiliate marketing — from hands-on engineering to leading teams of 15.',
   topicTags: ['Fintech', 'Regulated platforms', 'Organization scaling', 'AI-assisted delivery'],
