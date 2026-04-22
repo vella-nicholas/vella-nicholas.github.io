@@ -1,16 +1,11 @@
 import about from '@/data/about'
+import Section from '@/components/Section'
+import SectionHeader from '@/components/SectionHeader'
 
 export default function About() {
   return (
-    <section id="about" aria-label="About" className="w-full max-w-[1180px] mx-auto px-4 py-7 scroll-mt-20">
-      <div className="mb-10">
-        <p className="text-xs font-bold uppercase tracking-widest mb-3 text-[var(--accent)]">
-          About
-        </p>
-        <h2 className="m-0 font-bold tracking-[-0.04em] text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--text)]">
-          How I work.
-        </h2>
-      </div>
+    <Section id="about" ariaLabel="About">
+      <SectionHeader label="About" heading="How I work." />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
@@ -44,6 +39,6 @@ export default function About() {
         </div>
 
       </div>
-    </section>
+    </Section>
   )
 }
