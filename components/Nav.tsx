@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import LinkedInButton from '@/components/LinkedInButton'
 import { useHeroCTAVisibility } from '@/hooks/useHeroCTAVisibility'
 
@@ -13,9 +13,16 @@ const links = [
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const stickyBarVisible = !useHeroCTAVisibility()
+  const navRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const navHeight = navRef.current?.offsetHeight ?? 0
+    document.documentElement.style.scrollPaddingTop = `${navHeight}px`
+  }, [])
 
   return (
     <nav
+      ref={navRef}
       className="sticky top-0 z-50 border-b border-[var(--line)]"
       style={{
         backdropFilter: 'blur(14px)',
@@ -78,7 +85,19 @@ export default function Nav() {
                 key={href}
                 href={href}
                 className="flex items-center text-sm py-3 border-b border-[var(--line)] last:border-b-0 text-[var(--muted)] hover:text-[var(--text)] transition-colors"
-                onClick={() => setOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setOpen(false)
+                  const target = document.getElementById(href.slice(1))
+                  if (!target) return
+                  const navHeight = navRef.current?.offsetHeight ?? 0
+                  const stickyBar = document.getElementById('sticky-linkedin')
+                  const stickyHeight = stickyBarVisible && stickyBar ? stickyBar.offsetHeight : 0
+                  window.scrollTo({
+                    top: target.getBoundingClientRect().top + window.scrollY - navHeight - stickyHeight,
+                    behavior: 'smooth',
+                  })
+                }}
               >
                 {label}
               </a>
