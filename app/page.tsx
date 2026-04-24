@@ -6,6 +6,7 @@ import WhatIBring from '@/components/WhatIBring'
 import Delivered from '@/components/Delivered'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
+import BuiltWithAIFooter from '@/components/BuiltWithAIFooter'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Delivered />
         <About />
         <Contact />
+        <BuiltWithAIFooter />
       </main>
       <BackToTop />
       <StickyLinkedIn />
