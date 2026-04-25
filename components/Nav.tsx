@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import LinkedInButton from '@/components/LinkedInButton'
 import { useHeroCTAVisibility } from '@/hooks/useHeroCTAVisibility'
+import { STICKY_LINKEDIN_ID, NAV_HEIGHT_PX } from '@/lib/layout'
 
 const links = [
   { href: '#impact', label: 'Impact' },
@@ -14,10 +15,11 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
   const stickyBarVisible = !useHeroCTAVisibility()
   const navRef = useRef<HTMLElement>(null)
+  const topBarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const navHeight = navRef.current?.offsetHeight ?? 0
-    document.documentElement.style.scrollPaddingTop = `${navHeight}px`
+    const topBarHeight = topBarRef.current?.offsetHeight ?? NAV_HEIGHT_PX
+    document.documentElement.style.scrollPaddingTop = `${topBarHeight}px`
   }, [])
 
   return (
@@ -31,7 +33,7 @@ export default function Nav() {
       }}
       aria-label="Site navigation"
     >
-      <div className="w-full max-w-[1180px] mx-auto px-4 flex items-center justify-between py-4">
+      <div ref={topBarRef} className="w-full max-w-[1180px] mx-auto px-4 flex items-center justify-between py-4">
         <a href="#top" className="font-extrabold tracking-[-0.03em] text-[1.05rem] text-[var(--text)]">
           Nicholas Vella
         </a>
@@ -90,11 +92,16 @@ export default function Nav() {
                   setOpen(false)
                   const target = document.getElementById(href.slice(1))
                   if (!target) return
-                  const navHeight = navRef.current?.offsetHeight ?? 0
-                  const stickyBar = document.getElementById('sticky-linkedin')
-                  const stickyHeight = stickyBarVisible && stickyBar ? stickyBar.offsetHeight : 0
+                  const topBarHeight = topBarRef.current?.offsetHeight ?? NAV_HEIGHT_PX
+                  // Menu will collapse as we scroll — subtract its current height so the
+                  // scroll target matches where the section lands after the menu closes.
+                  const menuHeight = (navRef.current?.offsetHeight ?? topBarHeight) - topBarHeight
+                  // Always include sticky bar height: if it's hidden now, it will appear
+                  // once the scroll moves the hero CTA out of view.
+                  const stickyBar = document.getElementById(STICKY_LINKEDIN_ID)
+                  const stickyHeight = stickyBar?.offsetHeight ?? 0
                   window.scrollTo({
-                    top: target.getBoundingClientRect().top + window.scrollY - navHeight - stickyHeight,
+                    top: target.getBoundingClientRect().top + window.scrollY - topBarHeight - stickyHeight - menuHeight,
                     behavior: 'smooth',
                   })
                 }}

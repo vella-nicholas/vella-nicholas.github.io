@@ -17,7 +17,11 @@
   --muted: #b6c0e0;
   --line: rgba(255, 255, 255, 0.12);
   --accent: #8b5cf6;
+  --accent-dark: #6d28d9;
   --accent-2: #22c55e;
+  --accent-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+  --accent-glow-28: rgba(139, 92, 246, 0.28);
+  --accent-glow-12: rgba(139, 92, 246, 0.12);
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   --radius: 24px;
 }

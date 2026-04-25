@@ -1,8 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-
-export const HERO_CTA_ID = 'hero-cta'
+import { HERO_CTA_ID, NAV_HEIGHT_PX } from '@/lib/layout'
 
 export function useHeroCTAVisibility() {
   const [heroCTAVisible, setHeroCTAVisible] = useState(true)
@@ -12,7 +11,7 @@ export function useHeroCTAVisibility() {
     if (!el) return
     const observer = new IntersectionObserver(
       ([entry]) => setHeroCTAVisible(entry.isIntersecting),
-      { rootMargin: '-64px 0px 0px 0px', threshold: 0 }
+      { rootMargin: `-${NAV_HEIGHT_PX}px 0px 0px 0px`, threshold: 0 }
     )
     observer.observe(el)
     return () => observer.disconnect()
