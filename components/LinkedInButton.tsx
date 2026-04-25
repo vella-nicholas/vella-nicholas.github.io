@@ -12,50 +12,42 @@ const LinkedInIcon = () => (
   </svg>
 )
 
+const GRADIENT = 'linear-gradient(135deg, var(--accent), var(--accent-dark))'
+
+const variantConfig = {
+  primary: {
+    className: 'inline-flex items-center justify-center gap-2.5 px-[18px] py-[14px] rounded-full font-bold text-sm leading-none text-white transition-all hover:-translate-y-px hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+    style: { background: GRADIENT, boxShadow: 'var(--accent-shadow)' },
+    label: 'Connect on LinkedIn',
+    showIcon: true,
+  },
+  nav: {
+    className: 'inline-flex items-center justify-center px-[18px] py-[10px] rounded-full font-bold text-sm leading-none border border-[var(--line)] text-[var(--text)] transition-all hover:-translate-y-px hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+    style: { background: 'rgba(255,255,255,0.04)' },
+    label: 'Connect',
+    showIcon: false,
+  },
+  sticky: {
+    className: 'flex flex-1 items-center justify-center gap-2 pt-[14px] pb-[10px] font-bold text-sm leading-none text-white transition-all hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+    style: { background: GRADIENT },
+    label: 'Connect on LinkedIn',
+    showIcon: true,
+  },
+} as const
+
 export default function LinkedInButton({ variant = 'primary', className = '', onClick }: Props) {
-  if (variant === 'sticky') {
-    return (
-      <a
-        href={linkedInUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex flex-1 items-center justify-center gap-2 pt-[14px] pb-[10px] font-bold text-sm leading-none text-white transition-all hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${className}`}
-        style={{ background: 'linear-gradient(135deg, var(--accent), #6d28d9)' }}
-      >
-        <LinkedInIcon />
-        Connect on LinkedIn
-      </a>
-    )
-  }
-
-  if (variant === 'nav') {
-    return (
-      <a
-        href={linkedInUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center px-[18px] py-[10px] rounded-full font-bold text-sm leading-none border border-[var(--line)] text-[var(--text)] transition-all hover:-translate-y-px hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${className}`}
-        style={{ background: 'rgba(255,255,255,0.04)' }}
-        onClick={onClick}
-      >
-        Connect
-      </a>
-    )
-  }
-
+  const { className: baseClass, style, label, showIcon } = variantConfig[variant]
   return (
     <a
       href={linkedInUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2.5 px-[18px] py-[14px] rounded-full font-bold text-sm leading-none text-white transition-all hover:-translate-y-px hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${className}`}
-      style={{
-        background: 'linear-gradient(135deg, var(--accent), #6d28d9)',
-        boxShadow: '0 10px 30px rgba(139,92,246,0.35)',
-      }}
+      className={`${baseClass} ${className}`.trim()}
+      style={style}
       onClick={onClick}
     >
-      Connect on LinkedIn
+      {showIcon && <LinkedInIcon />}
+      {label}
     </a>
   )
 }

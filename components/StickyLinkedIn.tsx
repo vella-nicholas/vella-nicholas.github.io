@@ -1,6 +1,7 @@
 'use client'
 
 import { useHeroCTAVisibility } from '@/hooks/useHeroCTAVisibility'
+import { STICKY_LINKEDIN_ID } from '@/lib/layout'
 import LinkedInButton from '@/components/LinkedInButton'
 
 export default function StickyLinkedIn() {
@@ -9,7 +10,7 @@ export default function StickyLinkedIn() {
 
   return (
     <div
-      id="sticky-linkedin"
+      id={STICKY_LINKEDIN_ID}
       className="md:hidden fixed top-16 left-0 right-0 z-[60] flex border-b border-[var(--line)] transition-all duration-300"
         style={{
           backdropFilter: 'blur(14px)',

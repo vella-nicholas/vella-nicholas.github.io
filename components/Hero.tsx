@@ -1,6 +1,6 @@
 import hero from '@/data/hero'
 import achievements from '@/data/achievements'
-import { HERO_CTA_ID } from '@/hooks/useHeroCTAVisibility'
+import { HERO_CTA_ID } from '@/lib/layout'
 import LinkedInButton from '@/components/LinkedInButton'
 import Card from '@/components/Card'
 
@@ -19,7 +19,7 @@ export default function Hero() {
               inset: 'auto -30px -30px auto',
               width: 180,
               height: 180,
-              background: 'radial-gradient(circle, rgba(139,92,246,0.28), transparent 65%)',
+              background: 'radial-gradient(circle, var(--accent-glow-28), transparent 65%)',
             }}
             aria-hidden="true"
           />
@@ -70,7 +70,7 @@ export default function Hero() {
         <div className="relative">
           <div
             className="absolute inset-0 rounded-[var(--radius)] blur-3xl"
-            style={{ background: 'rgba(139,92,246,0.12)' }}
+            style={{ background: 'var(--accent-glow-12)' }}
             aria-hidden="true"
           />
           <Card as="aside" padding="p-6" className="relative" aria-label="Impact metrics">

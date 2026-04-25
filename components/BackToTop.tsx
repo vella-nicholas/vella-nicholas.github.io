@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { SCROLL_TOP_THRESHOLD } from '@/lib/layout'
 
 export default function BackToTop() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
-      const next = window.scrollY > 400
+      const next = window.scrollY > SCROLL_TOP_THRESHOLD
       setVisible((prev) => (prev === next ? prev : next))
     }
     window.addEventListener('scroll', onScroll, { passive: true })

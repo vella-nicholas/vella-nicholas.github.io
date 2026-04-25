@@ -5,7 +5,7 @@ export interface DeliveryCard {
   bullets: string[]
 }
 
-const deliveries: DeliveryCard[] = [
+const deliveries: [DeliveryCard, DeliveryCard, DeliveryCard] = [
   {
     category: 'Fintech / Regulatory',
     title: 'From compliance pressure to launch readiness',
